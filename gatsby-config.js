@@ -1,6 +1,10 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby starter Firebase',
+    title: 'Gatsby News',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,7 +20,20 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-layout'
+    'gatsby-plugin-layout',
     // 'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-apiserver',
+      options: {
+        typePrefix: 'internal__',
+        url: `https://newsapi.org/v2/everything?q=gatsby&language=en`,
+        method: 'get',
+        headers: {
+          'x-api-key': process.env.GATSBY_NEWS_API_KEY,
+        },
+        name: `posts`,
+        entityLevel: `articles`,
+      },
+    },
   ],
 }
