@@ -1,14 +1,10 @@
-# Gatsby Starter Redux Firebase
-
-Based on [gatsby-starter-firebase](https://github.com/muhajirframe/gatsby-starter-firebase/)
+# Gatsby News
 
 ## What's included
 
-- `FetchingExample` on how to fetch data from firebase.
+- [News API](https://newsapi.org/)
 
-  Note: For better experiece you might want to integrate it [redux](https://redux.js.org) or [mobx](http://mobx.js.org).
-
-  If you need it, submit an issue. I can create a starter / example repo with firebase + mobx or redux.
+- Gatsby Starter [gatsby-starter-redux-firebase](https://github.com/muhajirframe/gatsby-starter-redux-firebase)
 
 - Authentication with [react-firebaseui](https://github.com/firebase/firebaseui-web-react) (`SignIn`, `SignOut`)
 
@@ -25,11 +21,11 @@ npm install --global gatsby-cli
 Create new Gatsby project using this starter:
 
 ```sh
-gatsby new my-new-website https://github.com/muhajirframe/gatsby-starter-redux-firebase
+gatsby new gatsby-news https://github.com/muhajirframe/gatsby-starter-redux-firebase
 ```
 
 ```sh
-cd my-new-website
+cd gatsby-news
 ```
 
 ## Usage
@@ -37,26 +33,22 @@ cd my-new-website
 ### Develop
 
 ```
-npm run develop
+yarn develop
 ```
+
+You can visit the [http://localhost:8000](http://localhost:8000)
 
 ### Build
 
 ```
-npm run build
+yarn build
 ```
-
-Your built file will be in `/public`
-
-## Contributing
-
-Do not hesitate to:
-
-- [Submit an idea or question](https://github.com/muhajirframe/gatsby-starter-redux-firebase/issues/new)
-- Make a pull request
 
 ## Showcase
 
-Have a site made with this starter? Please submit an issue or PR
+![image](https://user-images.githubusercontent.com/25312831/75104312-d8011000-5642-11ea-8e6d-9882d7f59184.png)
+
+![image](https://user-images.githubusercontent.com/25312831/75104323-e6e7c280-5642-11ea-92bf-086aa5e9cfad.png)
+
 
 **Enjoy!**
