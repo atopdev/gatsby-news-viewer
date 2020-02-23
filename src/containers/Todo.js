@@ -33,10 +33,10 @@ class Todos extends Component {
     const todosList = !isLoaded(this.props.todos)
       ? 'Loading'
       : isEmpty(this.props.todos)
-        ? 'Todo list is empty'
-        : Object.keys(this.props.todos).map((key, id) => (
-            <TodoItem key={key} id={id} todo={this.props.todos[key]} />
-          ))
+      ? 'Todo list is empty'
+      : Object.keys(this.props.todos).map((key, id) => (
+          <TodoItem key={key} id={id} todo={this.props.todos[key]} />
+        ))
     return (
       <div>
         <h1>Todos</h1>

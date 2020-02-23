@@ -3,8 +3,10 @@ import { withFirebase } from '../components/FirebaseContext'
 
 class Signout extends Component {
   signOut = () => {
-    this.props.firebase.auth().signOut()
+    const { firebase } = this.props
+    firebase.auth().signOut()
   }
+
   render() {
     return (
       <button
@@ -18,6 +20,7 @@ class Signout extends Component {
           color: '#0f0f0f',
         }}
         onClick={this.signOut}
+        type="button"
       >
         Sign Out
       </button>
